@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Благовещенск гид — личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="account">
+    <header class="header">
+        <div class="header__logo">
+            <svg class="logo-svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="4" width="24" height="24" stroke="#00ff88" stroke-width="2" fill="none"/>
+                <circle cx="16" cy="16" r="4" fill="#00ff88"/>
+                <line x1="16" y1="4" x2="16" y2="8" stroke="#00ff88" stroke-width="2"/>
+                <line x1="16" y1="24" x2="16" y2="28" stroke="#00ff88" stroke-width="2"/>
+                <line x1="4" y1="16" x2="8" y2="16" stroke="#00ff88" stroke-width="2"/>
+                <line x1="24" y1="16" x2="28" y2="16" stroke="#00ff88" stroke-width="2"/>
+            </svg>
+            <span>БЛАГОВЕЩЕНСК ГИД</span>
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">ГЛАВНАЯ</a></li>
+                <li class="nav__item"><a href="places.html" class="nav__link">ДОСТОПРИМЕЧАТЕЛЬНОСТИ</a></li>
+                <li class="nav__item"><a href="account.html" class="nav__link nav__link--active">ПРОФИЛЬ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="account">
+        <div class="account__greeting">Добро пожаловать, <span class="account__name" id="accountName">Путешественник</span></div>
+        
+        <div class="account__profile profile">
+            <div class="profile__avatar">
+                <div class="profile__avatar-preview" id="avatarPreview">
+                    <!-- СЮДА ВСТАВИТЬ АВАТАР ПО УМОЛЧАНИЮ -->
+                    <img src="img/avatar-default.jpg" alt="Аватар" style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+                </div>
+                <input type="file" id="avatarUpload" accept="image/*" style="display: none">
+                <button class="profile__avatar-btn" id="changeAvatarBtn">Сменить аватар</button>
+            </div>
+            <div class="profile__info">
+                <div class="form__group">
+                    <label class="form__label">Имя пользователя</label>
+                    <input type="text" class="form__input" id="profileUsername" value="Путешественник">
+                </div>
+                <div class="form__group">
+                    <label class="form__label">Email</label>
+                    <input type="email" class="form__input" id="profileEmail" value="traveler@mail.ru">
+                </div>
+                <div class="form__group">
+                    <label class="form__label">ФИО</label>
+                    <input type="text" class="form__input" id="profileFullname" placeholder="Не указано">
+                </div>
+                <button class="profile__save-btn" id="saveProfileBtn">Сохранить изменения</button>
+            </div>
+        </div>
+
+        <div class="account__history history">
+            <h2 class="history__title">История просмотров</h2>
+            <div class="history__list" id="historyList">
+                <div class="history__empty">Нет просмотренных мест</div>
+            </div>
+        </div>
+
+        <button class="account__logout btn-logout" id="logoutBtn">Выйти</button>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__copy">© 2024-2026 Благовещенск Гид</div>
+        <div class="footer__links">
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+            <a href="#" class="footer__link">Контакты</a>
+            <a href="#" class="footer__link">О проекте</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
